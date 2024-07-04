@@ -74,15 +74,18 @@
 // console.log(func1("func1です"));
 
 // アロー関数
-// const func2 = (str) => {
+//  const func2 = (str) => {
 //   return str;
 // };
-// console.log(func2("func2です"));
+//  console.log(func2("func2です"));
 
 // const func3 = (num1, num2) => {
 //   return num1 + num2;
-// };
+//  };
 
+// const func3 = (num1, num2) => num1 + num2;
+
+// 
 // const func3 = (num1, num2) => ({
 //   hoge: num1,
 //   huga: num2,
@@ -90,38 +93,40 @@
 
 // console.log(func3(10, 20));
 
+
 /**
  * 分割代入
  */
 // const myProfile = {
-//   name: "じゃけぇ",
-//   age: 31
+//   name: "もち",
+//   age: 28
 // };
 
-// const message1 = `名前は${myProfile.name}です。年齢は${myProfile.age}です。`;
+// const message1 = `名前は${myProfile.name}です。年齢は${myProfile.age}歳です。`
 // console.log(message1);
 
 // const { name, age } = myProfile;
-// const message2 = `名前は${name}です。年齢は${age}です。`;
+// const message2 = `名前は${name}です。年齢は${age}歳です。`;
 // console.log(message2);
 
-// const myProfile = ["じゃけぇ", 31];
+// const myProfile = ["もち", 28];
 
-// const message3 = `名前は${myProfile[0]}です。年齢は${myProfile[1]}です。`;
-// console.log(message3);
+// // const message3 = `名前は${myProfile[0]}です。年齢は${myProfile[1]}歳です。`;
+// // console.log(message3);
 
 // const [name, age] = myProfile;
-// const message4 = `名前は${name}です。年齢は${age}です。`;
-// console.log(message4);
+// // const message4 = `名前は${name}です。年齢は${age}です。`;
+// // console.log(message4);
 
 /**
  * デフォルト値（引数、分割代入）
  */
-// const sayHello = (name = "ゲスト") => console.log(`こんちには!${name}さん!`);
-// sayHello("じゃけぇ");
+
+// const sayHello = (name = "ゲスト") => console.log(`こんにちは！${name}さん！`);
+// sayHello(もち);
 
 // const myProfile = {
-//   age: 31
+//   age: 28
 // };
 // const { age, name = "ゲスト" } = myProfile;
 // console.log(age);
@@ -130,12 +135,10 @@
 /**
  * オブジェクトの省略記法
  */
-// const name = "じゃけぇ";
-// const age = 31;
-// const myProfile = {
-//   name: name,
-//   age: age
-// };
+
+// const name = "もち";
+// const age = 28;
+
 // const myProfile = {
 //   name,
 //   age
@@ -143,8 +146,9 @@
 // console.log(myProfile);
 
 /**
- * スプレッド構文 ...
+ * スプレッド構文...
  */
+
 // 配列の展開
 // const arr1 = [1, 2];
 // console.log(arr1);
@@ -154,59 +158,51 @@
 // sumFunc(arr1[0], arr1[1]);
 // sumFunc(...arr1);
 
-// まとめる
+//まとめる
+
 // const arr2 = [1, 2, 3, 4, 5];
 // const [num1, num2, ...arr3] = arr2;
 // console.log(num1);
 // console.log(num2);
 // console.log(arr3);
 
+
 // 配列のコピー、結合
-// const arr4 = [10, 20];
-// const arr5 = [30, 40];
+// const arr4 = [10,20];
+// const arr5 = [30,40];
 
 // const arr6 = [...arr4];
-// console.log(arr6);
+// // console.log(arr6);
+
 
 // const arr7 = [...arr4, ...arr5];
 // console.log(arr7);
 
-// const arr8 = arr4;
-// arr8[0] = 100;
-// console.log(arr8);
-
 /**
  * mapやfilterを使った配列の処理
  */
-// const nameArr = ['田中', '山田', 'じゃけぇ'];
-// for (let index = 0; index < nameArr.length; index++) {
-//   console.log(nameArr[index]);
-// }
 
-// for (let index = 0; index < nameArr.length; index++) {
-//   console.log(`${index + 1}番目は${nameArr[index]}です`);
-// }
+// const nameArr = ["田中", "山本", "山田"];
 
 // const nameArr2 = nameArr.map((name) => {
 //   return name;
-// })
+// });
 // console.log(nameArr2);
 
-// nameArr.map((name) => console.log(name));
-
-// nameArr.map((name, index) => console.log(`${index + 1}番目は${name}です`));
-
 // const numArr = [1, 2, 3, 4, 5];
-// const newNumArr = numArr.filter((num) => {
+// const newArr = numArr.filter((num) => {
 //   return num % 2 === 1;
-// })
-// console.log(newNameArr);
+// });
+// console.log(newArr);
+
+// const nameArr = ["田中", "山本", "山田"];
+// // nameArr.map((name, index) => console.log(`${index + 1}番目は${name}です`));
 
 // const newNameArr = nameArr.map((name) => {
-//   if (name === "じゃけぇ") {
+//   if (name === "山本") {
 //     return name;
 //   } else {
-//     return `${name}さん`;
+//     return `${name}さん` ;
 //   }
 // });
 // console.log(newNameArr);
@@ -214,49 +210,54 @@
 /**
  * 三項演算子
  */
-// ある条件 ? 条件がtrueの時 : 条件がfalseの時
+// ある条件　? 条件がtrueの時　：　条件がfalseの時
 // const val1 = 1 > 0 ? "trueです" : "falseです";
 // console.log(val1);
 
-// const num = '1300';
+// const num = 1300;
 // console.log(num.toLocaleString());
 
-// const formattedNum = typeof num === 'number' ? num.toLocaleString() : '数値を入力してください';
+// const formattedNum = typeof num === 'number' ? num.toLocaleString() : "数値を入力してください";
 // console.log(formattedNum);
 
+
+// //二つの引数を受け取って合計をチェックする関数
+
 // const checkSum = (num1, num2) => {
-//   return num1 + num2 > 100 ? "100を超えています!!" : "許容範囲内です";
+//     return num1 + num2 > 100 ? "１００を超えています！" : "許容範囲内です";
 // };
-// console.log(checkSum(50, 40));
+// console.log(checkSum(40, 400));
 
 /**
- * 論理演算子の本当の意味を知ろう && ||
+ * 論理演算子の本当の意味を知ろう
  */
-// truthy、falsyについて
+//truthy, falsyについて
 // "ABC" 0 10 undefined null false NaN "" [] {}
-const val = "ABC";
-if (val) {
-  console.log("valはtruthyです");
-} else {
-  console.log("valはfalsyです");
-}
+const val = [];
+ if (val) {
+     console.log("valはtruthyです");
+ } else {
+     console.log("valはfalsyです");
+ }
 
 const flag1 = true;
-const flag2 = false;
+const flag2 = true;
 
 if (flag1 || flag2) {
-  console.log("1か2はtrueになります");
+    console.log("1か2はtrueになります");
 }
 if (flag1 && flag2) {
-  console.log("1も2もtrueになります");
+    console.log("1も2もtrueになります");
 }
 
-// || は左側がtruthyの時その時点で返却する
-const num = null;
-const fee = num || "金額未設定です";
+
+// ||は左側がtruthyの時、その時点でその値を返却する
+const num = 0;
+const fee = num || "金額未設定です！"
 console.log(fee);
 
-// && は左側がfalsyの時その時点で返却する
-// const num2 = 100;
-// const fee2 = num2 && "何か設定されました";
-// console.log(fee2);
+
+// ＆＆は左側がfalsyの時その時点でその値を返却する
+const num2 = null;
+const fee2 = num2 && "何か設定されました";
+console.log(fee2);
